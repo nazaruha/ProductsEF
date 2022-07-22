@@ -19,6 +19,15 @@ namespace ProductsView
             dgProducts.DataSource = list;
         }
 
+        private int GetSelectedProductId()
+        {
+            if (dgProducts.SelectedRows.Count != 1)
+                return -1;
+            int rowIndex = dgProducts.SelectedRows[0].Index;
+            int id = int.Parse(dgProducts[0, rowIndex].Value.ToString());
+            return id;
+        }
+
         private void btnCreate_Click(object sender, EventArgs e)
         {
             CreateForm createForm = new CreateForm(context);
@@ -28,7 +37,11 @@ namespace ProductsView
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-
+            int productId = GetSelectedProductId();
+            if (productId == -1) return;
+            EditForm editForm = new EditForm(productId, context);
+            editForm.ShowDialog();
+            GetProducts();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
