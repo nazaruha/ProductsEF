@@ -10,12 +10,20 @@ namespace ProductsView
         {
             InitializeComponent();
             context = new AppEFContext();
+            GetProducts();
+        }
+
+        private void GetProducts()
+        {
+            var list = context.Products.ToList();
+            dgProducts.DataSource = list;
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
             CreateForm createForm = new CreateForm(context);
             createForm.ShowDialog();
+            GetProducts();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
