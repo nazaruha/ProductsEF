@@ -33,11 +33,11 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numCount = new System.Windows.Forms.NumericUpDown();
+            this.numPrice = new System.Windows.Forms.NumericUpDown();
             this.btnCreate = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPrice)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -89,21 +89,21 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "Price";
             // 
-            // numericUpDown1
+            // numCount
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numericUpDown1.Location = new System.Drawing.Point(94, 181);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(260, 43);
-            this.numericUpDown1.TabIndex = 3;
+            this.numCount.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.numCount.Location = new System.Drawing.Point(94, 181);
+            this.numCount.Name = "numCount";
+            this.numCount.Size = new System.Drawing.Size(260, 43);
+            this.numCount.TabIndex = 3;
             // 
-            // numericUpDown2
+            // numPrice
             // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numericUpDown2.Location = new System.Drawing.Point(94, 273);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(260, 43);
-            this.numericUpDown2.TabIndex = 3;
+            this.numPrice.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.numPrice.Location = new System.Drawing.Point(94, 273);
+            this.numPrice.Name = "numPrice";
+            this.numPrice.Size = new System.Drawing.Size(260, 43);
+            this.numPrice.TabIndex = 3;
             // 
             // btnCreate
             // 
@@ -115,6 +115,7 @@
             this.btnCreate.TabIndex = 4;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // CreateForm
             // 
@@ -122,8 +123,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(540, 420);
             this.Controls.Add(this.btnCreate);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numPrice);
+            this.Controls.Add(this.numCount);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -131,8 +132,8 @@
             this.Controls.Add(this.label1);
             this.Name = "CreateForm";
             this.Text = "CreateForm";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPrice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,8 +146,8 @@
         private TextBox txtName;
         private Label label3;
         private Label label4;
-        private NumericUpDown numericUpDown1;
-        private NumericUpDown numericUpDown2;
+        private NumericUpDown numCount;
+        private NumericUpDown numPrice;
         private Button btnCreate;
     }
 }
