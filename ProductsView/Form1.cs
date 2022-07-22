@@ -9,7 +9,8 @@ namespace ProductsView
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-
+            CreateForm createForm = new CreateForm();
+            createForm.ShowDialog();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
