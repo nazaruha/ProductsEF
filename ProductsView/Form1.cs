@@ -46,7 +46,15 @@ namespace ProductsView
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
+            int productId = GetSelectedProductId();
+            if (productId == -1) return;
+            var product = context.Products.SingleOrDefault(p => p.Id == productId);
+            if (product != null)
+            {
+                context.Remove(product);
+                context.SaveChanges();
+                GetProducts();
+            }
         }
     }
 }
